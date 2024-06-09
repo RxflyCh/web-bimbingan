@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+
+
+header {
+    
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0 10px;
+    font-size: 0.9em;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+main h2{
+    
+    color: #0872eb;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin-left: 20px;
+    text-align: center;    
+    margin-bottom: 0px;
+    font-style: normal;
+
+}
+
+h5 {
+    font-size: 90%;
+    font-weight: 100;
+    color: #0112017b;
+    padding-bottom: 0px;
+    margin-left: 21px;
+    margin-top: 0px;
+}
+
+div{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #5cb85c;
+    font-size: 21px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    text-align: justify;
+}
+
+
+
+section p, section ul, section ol {
+    margin: 10px 0;
+}
+
+section ul, section ol {
+    padding-left: 20px;
+}
+
+section ul li, section ol li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    
+}
+
+footer p {
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h2 {
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Apply the animation to images */
+main img {
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
